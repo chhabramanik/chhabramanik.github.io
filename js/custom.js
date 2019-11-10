@@ -193,49 +193,7 @@ jQuery(document).ready(function($){
 
 /* -------------------- Twitter --------------------- */
 
-jQuery(document).ready(function($){
-	
-	$.getJSON('https://api.twitter.com/1/statuses/user_timeline/lukaszholeczek.json?count=3&callback=?', function(tweets){
-		$("#twitter").html(tz_format_twitter(tweets));
-	}); 
 
-});
-
-jQuery(document).ready(function($){
-	
-	/* ------------------- Fancybox --------------------- */
-
-	(function() {
-
-		$('[rel=image]').fancybox({
-			type        : 'image',
-			openEffect  : 'fade',
-			closeEffect	: 'fade',
-			nextEffect  : 'fade',
-			prevEffect  : 'fade',
-			helpers     : {
-				title   : {
-					type : 'inside'
-				}
-			}
-		});
-
-		$('[rel=image-gallery]').fancybox({
-			nextEffect  : 'fade',
-			prevEffect  : 'fade',
-			helpers     : {
-				title   : {
-					type : 'inside'
-				},
-				buttons  : {},
-				media    : {}
-			}
-		});
-
-
-	})();
-	
-	
 	/* ------------------- Client Carousel --------------------- */
 
 	$('.clients-carousel').flexslider({
