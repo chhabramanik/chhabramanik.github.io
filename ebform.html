@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+
+
+    <!-- Title Page-->
+    <title>EB Application</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/maindelegateform.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper p-t-130 p-b-100 font-poppins" style="background-color:orangered">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">EB Applications </h2>
+                    <form method="POST" id="test-form" name="myForm" >
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">first name</label>
+                                    <input class="input--style-4" type="text" name="first_name" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                          <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label">last name</label>
+                                  <input class="input--style-4" type="text" name="last_name" required>
+                              </div>
+                          </div>
+                      </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Date of Birth</label>
+                                    <div class="input-group-icon">
+                                        <input class="input--style-4 js-datepicker" type="text" name="dob" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Gender</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Male
+                                            <input type="radio" name="male">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input type="radio" name="female">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Others
+                                            <input type="radio" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> -->
+                          </div>
+                          <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Registration Number (Only for MAHE Students)</label>
+                                    <input class="input--style-4" type="text" name="Registration">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                </div>
+                            </div>
+                          </div>
+                          <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Phone Number</label>
+                                    <input class="input--style-4" type="text" name="phone" pattern="[0-9]{10}" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                          <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label2">Whatsapp Number (Repeat if same)</label>
+                                  <input class="input--style-4" type="text" name="whatsapp" pattern="[0-9]{10}" required>
+                              </div>
+                          </div>
+                      </div>
+                        <div class="input-group">
+                            <label class="label">committee Preference 1</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="firstpreference" required>
+                                    <option disabled="disabled" selected="selected" name="preference_1">Preferences:</option>
+                                    <option>DISEC</option>
+                                    <option>HRC</option>
+                                    <option>CCC</option>
+                                    <option>Bilderberg</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="label">Committee Preference 2</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="secondpreference" required>
+                                    <option disabled="disabled" selected="selected" name="preference_2">Preferences:</option>
+                                    <option>DISEC</option>
+                                    <option>HRC</option>
+                                    <option>CCC</option>
+                                    <option>Bilderberg</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="label">Committee Preference 3</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="thirdpreference" required>
+                                    <option disabled="disabled" selected="selected" name="preference_3">Preferences</option>
+                                    <option>DISEC</option>
+                                    <option>HRC</option>
+                                    <option>CCC</option>
+                                    <option>Bilderberg</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="input_fields_wrap">
+                            <label class="label">Prior Experience ( Delegate )
+                              <br>year-MUN-portfolio-Award(if any)
+                              <br>Eg. 2019-MMUN-China-Special Mention</label>
+
+                            <div class="p-t-15"><input type="text" name="exp[delegate]" class="input--style-4" required></div>
+                            <!-- <center><button class="add_field_button btn2 btn--green">Add More Fields</button></center> -->
+                          </div>
+                          <div class="input_fields_wrap p-t-15" >
+                              <label class="label">Prior Experience ( Executive Board )
+                                <br>year-MUN-Role
+                                <br>Eg. 2019-MMUN-Vice Chair</label>
+
+                              <div class="p-t-15"><input type="text" name="exp[eb]" class="input--style-4" required></div>
+                              <!-- <center><button class="add_field_button btn2 btn--green">Add More Fields</button></center> -->
+                            </div>
+                        <div class="p-t-15">
+                            <center><button class="btn btn--radius-2 btn--blue" type="submit" id="submit-form">Submit</button></center>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+  var $form = $('form#test-form'),
+      url = 'https://script.google.com/macros/s/AKfycbx4fHCB2Optd-_EJRrj3ynFfnCShP5SvaY3FHLHe8LxeFBmluQg/exec'
+
+  $('#submit-form').on('click', function(e) {
+
+    e.preventDefault();
+    var jqxhr = $.ajax({
+      url: url,
+      method: "GET",
+      dataType: "json",
+      data: $form.serialize()
+
+    }).success(
+      alert('Submitted!')
+    );
+  })
+  </script>
+  <script>
+  $(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            if (x==2)
+            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[2]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            else if (x==3)
+            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[3]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            else if (x==4)
+            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[4]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            else if (x==5)
+            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[5]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            else if (x==6)
+            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[6]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            else if (x==7)
+            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[7]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            else if (x==8)
+            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[8]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            else if (x==9)
+            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[9]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            else if (x==10)
+            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[10]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+
+        }else {
+          alert('Maximum no. of Experience reached!')
+        }
+    });
+
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+});
+
+  </script>
+  <script>
+  function validateForm() {
+   var x = document.forms["myForm"]["phone"].value;
+   if ( x == null || x == "" ) {
+      alert("Fill Details properly");
+      return false;
+   }
+}
+</script>
+
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
