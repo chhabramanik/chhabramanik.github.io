@@ -189,7 +189,7 @@
       data: $form.serialize()
 
     }).success(
-      alert('Submitted. You\'ll be contacted soon for an interview, if Shortlisted.')
+      validateForm()
     );
   })
   </script>
@@ -238,10 +238,11 @@
   function validateForm() {
    var x = document.forms["myForm"]["phone"].value;
    if ( x == null || x == "" ) {
-      alert("Fill Details properly");
-      return false;
    }
-}
+      
+       alert('Submitted. You\'ll be contacted soon for an interview, if Shortlisted.');
+       window.open("https://www.manipalmun.com","_self");
+   }
 </script>
 
 
