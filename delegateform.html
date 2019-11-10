@@ -262,7 +262,7 @@
       data: $form.serialize()
 
     }).success(
-      alert('Submitted. You\'ll be contacted soon with the payment details and allotted portfolio')
+      validateForm()
     );
   })
   </script>
@@ -311,8 +311,10 @@
   function validateForm() {
    var x = document.forms["myForm"]["phone"].value;
    if ( x == null || x == "" ) {
-      alert("Fill Details properly");
-      return false;
+   }
+      
+       alert('Submitted. You\'ll be contacted soon with the payment details and allotted portfolio');
+       window.open("https://www.manipalmun.com","_self");
    }
 }
 </script>
