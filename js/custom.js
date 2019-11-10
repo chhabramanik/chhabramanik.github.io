@@ -192,6 +192,39 @@ jQuery(document).ready(function($){
 });
 
 /* -------------------- Twitter --------------------- */
+jQuery(document).ready(function($){
+	
+	/* ------------------- Fancybox --------------------- */
+
+	(function() {
+
+		$('[rel=image]').fancybox({
+			type        : 'image',
+			openEffect  : 'fade',
+			closeEffect	: 'fade',
+			nextEffect  : 'fade',
+			prevEffect  : 'fade',
+			helpers     : {
+				title   : {
+					type : 'inside'
+				}
+			}
+		});
+
+		$('[rel=image-gallery]').fancybox({
+			nextEffect  : 'fade',
+			prevEffect  : 'fade',
+			helpers     : {
+				title   : {
+					type : 'inside'
+				},
+				buttons  : {},
+				media    : {}
+			}
+		});
+
+
+	})();
 
 
 	/* ------------------- Client Carousel --------------------- */
