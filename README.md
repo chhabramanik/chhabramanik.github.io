@@ -1,3 +1,1 @@
-# Summit-Manipal
-# Summit-Manipal
-# Summit-Manipal
+Manipal MUN 2020 Official Website
