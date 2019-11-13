@@ -35,7 +35,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="first_name" required>
+                                    <input class="input--style-4" type="text" name="first_name" >
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                           <div class="col-2">
                               <div class="input-group">
                                   <label class="label">last name</label>
-                                  <input class="input--style-4" type="text" name="last_name" required>
+                                  <input class="input--style-4" type="text" name="last_name" >
                               </div>
                           </div>
                       </div>
@@ -52,7 +52,7 @@
                                 <div class="input-group">
                                     <label class="label">Date of Birth</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="dob" required>
+                                        <input class="input--style-4 js-datepicker" type="text" name="dob" >
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                    <input class="input--style-4" type="email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                                 </div>
                             </div>
                           </div>
@@ -96,7 +96,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone" pattern="[0-9]{10}" required>
+                                    <input class="input--style-4" type="text" name="phone" pattern="[0-9]{10}" >
                                 </div>
                             </div>
                         </div>
@@ -104,15 +104,15 @@
                           <div class="col-2">
                               <div class="input-group">
                                   <label class="label2">Whatsapp Number (Repeat if same)</label>
-                                  <input class="input--style-4" type="text" name="whatsapp" pattern="[0-9]{10}" required>
+                                  <input class="input--style-4" type="text" name="whatsapp" pattern="[0-9]{10}" >
                               </div>
                           </div>
                       </div>
                         <div class="input-group">
                             <label class="label">committee Preference 1</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="firstpreference" required>
-                                    <option disabled="disabled" selected="selected" name="preference_1">Preferences:</option>
+                                <select name="firstpreference" >
+                                    <option disabled="disabled" selected="selected" name="preference_1" value="null">Preferences:</option>
                                     <option>DISEC</option>
                                     <option>HRC</option>
                                     <option>CCC</option>
@@ -125,8 +125,8 @@
                         <div class="input-group">
                             <label class="label">Committee Preference 2</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="secondpreference" required>
-                                    <option disabled="disabled" selected="selected" name="preference_2">Preferences:</option>
+                                <select name="secondpreference" >
+                                    <option disabled="disabled" selected="selected" name="preference_2 value="null">Preferences:</option>
                                     <option>DISEC</option>
                                     <option>HRC</option>
                                     <option>CCC</option>
@@ -139,8 +139,8 @@
                         <div class="input-group">
                             <label class="label">Committee Preference 3</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="thirdpreference" required>
-                                    <option disabled="disabled" selected="selected" name="preference_3">Preferences</option>
+                                <select name="thirdpreference" >
+                                    <option disabled="disabled" selected="selected" name="preference_3" value="null">Preferences</option>
                                     <option>DISEC</option>
                                     <option>HRC</option>
                                     <option>CCC</option>
@@ -175,13 +175,68 @@
         </div>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
+     <script>
   var $form = $('form#test-form'),
-      url = 'https://script.google.com/macros/s/AKfycbx4fHCB2Optd-_EJRrj3ynFfnCShP5SvaY3FHLHe8LxeFBmluQg/exec'
+      url = 'https://script.google.com/macros/s/AKfycbyLduHhLydzjhyFhX6Y3rs5bmv28wu88WHJmVGHzlssJW8Yuik/exec'
 
   $('#submit-form').on('click', function(e) {
 
     e.preventDefault();
+    var x = document.forms["myForm"]["first_name"].value;
+    if ( x == null || x == "" ) {
+        alert('Please Fill First Name')
+        myForm.first_name.focus();
+        return false;
+    }
+    var y = document.forms["myForm"]["last_name"].value;
+    if ( y == null || y == "" ) {
+        alert('Please Fill Last Name')
+        myForm.last_name.focus();
+        return false;
+    }
+    var z = document.forms["myForm"]["dob"].value;
+    if ( z == null || z == "" ) {
+        alert('Please Fill DOB')
+        myForm.dob.focus();
+        return false;
+    }
+    var a = document.forms["myForm"]["email"].value;
+    if ( a == null || a == "" ) {
+        alert('Please Fill Email')
+        myForm.email.focus();
+        return false;
+    }
+    var b = document.forms["myForm"]["phone"].value;
+    if ( b == null || b == "" ) {
+        alert('Please Fill Phone Number')
+        myForm.phone.focus();
+        return false;
+    }
+    var c = document.forms["myForm"]["whatsapp"].value;
+    if ( c == null || c == "" ) {
+        alert('Please Fill Whatsapp Number')
+        myForm.whatsapp.focus();
+        return false;
+    }
+    var d = document.forms["myForm"]["firstpreference"].value;
+    if ( d == null || d == "" ) {
+        alert('Please Fill First Preference')
+        myForm.firstpreference.focus();
+        return false;
+    }
+    var e = document.forms["myForm"]["secondpreference"].value;
+    if ( e == null || e == "" ) {
+        alert('Please Fill Second Preference')
+        myForm.secondpreference.focus();
+        return false;
+    }
+    var f = document.forms["myForm"]["thirdpreference"].value;
+    if ( f == null || f == "" ) {
+        alert('Please Fill Third Preference')
+        myForm.thirdpreference.focus();
+        return false;
+    }
+    else
     var jqxhr = $.ajax({
       url: url,
       method: "GET",
@@ -192,47 +247,6 @@
       validateForm()
     );
   })
-  </script>
-  <script>
-  $(document).ready(function() {
-    var max_fields      = 10; //maximum input boxes allowed
-    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
-    var add_button      = $(".add_field_button"); //Add button ID
-
-    var x = 1; //initlal text box count
-    $(add_button).click(function(e){ //on add input button click
-        e.preventDefault();
-        if(x < max_fields){ //max input box allowed
-            x++; //text box increment
-            if (x==2)
-            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[2]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            else if (x==3)
-            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[3]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            else if (x==4)
-            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[4]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            else if (x==5)
-            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[5]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            else if (x==6)
-            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[6]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            else if (x==7)
-            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[7]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            else if (x==8)
-            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[8]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            else if (x==9)
-            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[9]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            else if (x==10)
-            $(wrapper).append('<div class="p-t-15"><input class="input--style-4" type="text" name="exp[10]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-
-        }else {
-          alert('Maximum no. of Experience reached!')
-        }
-    });
-
-    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-        e.preventDefault(); $(this).parent('div').remove(); x--;
-    })
-});
-
   </script>
   <script>
   function validateForm() {
