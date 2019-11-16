@@ -1,13 +1,4 @@
-﻿/*
-* Author: Łukasz Holeczek
-* Template: Essentia Bootstrap Theme
-* Version: 1.0.0
-* Bootstrap version: 2.3.1
-* Copyright 2012 creativeLabs
-* www: http://bootstrapmaster.com
-* mail: lukasz@bootstrapmaster.com
-* You can download this theme on WrapBootstrap: https://bootstrapmaster.com
-*/
+
 
 /* Import Section
 =================================================================== */
@@ -20,6 +11,10 @@
 
 /* Colors Section
 =================================================================== */
+.textarea {
+   font-family: inherit;
+   font-size: inherit;
+}
 .color.white {
 	background: #fff;
 	color: #414141;
