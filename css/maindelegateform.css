@@ -706,3 +706,8 @@ input {
     padding: 50px 40px;
   }
 }
+
+.textarea {
+   font-family: inherit;
+   font-size: inherit;
+}
