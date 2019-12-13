@@ -1,0 +1,366 @@
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+
+
+    <!-- Title Page-->
+    <title>Delegate Application</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/maindelegateform.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-blue p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Delegate Applications </h2>
+                    <form method="POST" id="test-form" name="myForm" >
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">first name</label>
+                                    <input class="input--style-4" type="text" name="first_name" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                          <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label">last name</label>
+                                  <input class="input--style-4" type="text" name="last_name" >
+                              </div>
+                          </div>
+                      </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Date of Birth</label>
+                                    <div class="input-group-icon">
+                                        <input class="input--style-4 js-datepicker" type="text" name="dob" >
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Gender</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Male
+                                            <input type="radio" name="male">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input type="radio" name="female">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Others
+                                            <input type="radio" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> -->
+                          </div>
+                          <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">College</label>
+                                    <input class="input--style-4" type="text" name="College" >
+                                </div>
+                            </div>
+                        </div>
+                          <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Registration Number (Only for MAHE Students)</label>
+                                    <input class="input--style-4" type="text" name="Registration">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                </div>
+                            </div>
+                          </div>
+                          <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Phone Number</label>
+                                    <input class="input--style-4" type="text" name="phone" pattern="[0-9]{10}" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                          <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label2">Whatsapp Number (Repeat if same)</label>
+                                  <input class="input--style-4" type="text" name="whatsapp" pattern="[0-9]{10}" >
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row row-space">
+                        <label class="label" ><h3>Please refer to the Country Matrix for preferences</h3></label>
+                      <label class="label" ><a href="https://docs.google.com/document/d/1VfH1GhMuzAcg9wgGQrEf9rgbR421cOXnNrzsQjorL9A/edit?usp=sharing">Country Matrix</a></label>
+                    </div>
+                        <div class="input-group">
+                            <label class="label">committee Preference 1</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="firstpreference" >
+                                    <option disabled="disabled" selected="selected" name="preference_1" value="null">Preferences:</option>
+                                    <option>DISEC</option>
+                                    <option>HRC</option>
+                                    <option>CCC</option>
+                                    <option>Bilderberg</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                          <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label">Portfolio Preference 1</label>
+                                  <input class="input--style-4" type="text" name="countrypref1">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Portfolio Preference 2</label>
+                                <input class="input--style-4" type="text" name="countrypref2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space">
+                      <div class="col-2">
+                          <div class="input-group">
+                              <label class="label">Portfolio Preference 3</label>
+                              <input class="input--style-4" type="text" name="countrypref3">
+                          </div>
+                      </div>
+                  </div>
+                        <div class="input-group">
+                            <label class="label">Committee Preference 2</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="secondpreference" >
+                                    <option disabled="disabled" selected="selected" name="preference_2" value="null">Preferences:</option>
+                                    <option>DISEC</option>
+                                    <option>HRC</option>
+                                    <option>CCC</option>
+                                    <option>Bilderberg</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                          <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label">Portfolio Preference 1</label>
+                                  <input class="input--style-4" type="text" name="countrypref1_2">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Portfolio Preference 2</label>
+                                <input class="input--style-4" type="text" name="countrypref2_2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space">
+                      <div class="col-2">
+                          <div class="input-group">
+                              <label class="label">Portfolio Preference 3</label>
+                              <input class="input--style-4" type="text" name="countrypref3_2">
+                          </div>
+                      </div>
+                  </div>
+                        <div class="input-group">
+                            <label class="label">Committee Preference 3</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="thirdpreference" >
+                                    <option disabled="disabled" selected="selected" name="preference_3" value="null">Preferences</option>
+                                    <option>DISEC</option>
+                                    <option>HRC</option>
+                                    <option>CCC</option>
+                                    <option>Bilderberg</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                          <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label">Portfolio Preference 1</label>
+                                  <input class="input--style-4" type="text" name="countrypref1_3">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Portfolio Preference 2</label>
+                                <input class="input--style-4" type="text" name="countrypref2_3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space">
+                      <div class="col-2">
+                          <div class="input-group">
+                              <label class="label">Portfolio Preference 3</label>
+                              <input class="input--style-4" type="text" name="countrypref3_3">
+                          </div>
+                      </div>
+                  </div>
+                        <div class="input_fields_wrap">
+                            <label class="label">Prior Experience ( Delegate )
+                              <br>year-MUN-portfolio-Award(if any)
+                              <br>Eg. 2019-MMUN-China-Special Mention</label>
+
+                            <div class="p-t-15"><textarea rows="2" cols="50" class="input--style-4" name="exp[delegate]" >
+</textarea></div>
+                            <!-- <center><button class="add_field_button btn2 btn--green">Add More Fields</button></center> -->
+                          </div>
+                          <div class="input_fields_wrap p-t-15" >
+                              <label class="label">Prior Experience ( Executive Board )
+                                <br>year-MUN-Role
+                                <br>Eg. 2019-MMUN-Vice Chair</label>
+
+                              <div class="p-t-15"><textarea rows="2" cols="50" class="input--style-4" name="exp[eb]">
+</textarea></div>
+                              <!-- <center><button class="add_field_button btn2 btn--green">Add More Fields</button></center> -->
+                            </div>
+                        <div class="p-t-15">
+                            <center><button class="btn btn--radius-2 btn--blue" type="submit" id="submit-form">Submit</button></center>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+  var $form = $('form#test-form'),
+      url = 'https://script.google.com/macros/s/AKfycbx5gT4C57w09xyzM95bGC_2nZVa-HM2e_w8Bwm4YFJ5Bt-bPIsz/exec'
+
+  $('#submit-form').on('click', function(e) {
+
+    e.preventDefault();
+    var x = document.forms["myForm"]["first_name"].value;
+    if ( x == null || x == "" ) {
+        alert('Please Fill First Name')
+        myForm.first_name.focus();
+        return false;
+    }
+    var y = document.forms["myForm"]["last_name"].value;
+    if ( y == null || y == "" ) {
+        alert('Please Fill Last Name')
+        myForm.last_name.focus();
+        return false;
+    }
+    var z = document.forms["myForm"]["dob"].value;
+    if ( z == null || z == "" ) {
+        alert('Please Fill DOB')
+        myForm.dob.focus();
+        return false;
+    }
+    var a = document.forms["myForm"]["email"].value;
+    if ( a == null || a == "" ) {
+        alert('Please Fill Email')
+        myForm.email.focus();
+        return false;
+    }
+    var b = document.forms["myForm"]["phone"].value;
+    if ( b == null || b == "" ) {
+        alert('Please Fill Phone Number')
+        myForm.phone.focus();
+        return false;
+    }
+    var c = document.forms["myForm"]["whatsapp"].value;
+    if ( c == null || c == "" ) {
+        alert('Please Fill Whatsapp Number')
+        myForm.whatsapp.focus();
+        return false;
+    }
+    var d = document.forms["myForm"]["firstpreference"].value;
+    if ( d == null || d == "" ) {
+        alert('Please Fill First Preference')
+        myForm.firstpreference.focus();
+        return false;
+    }
+    var e = document.forms["myForm"]["secondpreference"].value;
+    if ( e == null || e == "" ) {
+        alert('Please Fill Second Preference')
+        myForm.secondpreference.focus();
+        return false;
+    }
+    var f = document.forms["myForm"]["thirdpreference"].value;
+    if ( f == null || f == "" ) {
+        alert('Please Fill Third Preference')
+        myForm.thirdpreference.focus();
+        return false;
+    }
+    var g = document.forms["myForm"]["College"].value;
+    if ( g == null || g == "" ) {
+        alert('Please Fill Third Preference')
+        myForm.College.focus();
+        return false;
+    }
+    else
+    var jqxhr = $.ajax({
+      url: url,
+      method: "GET",
+      dataType: "json",
+      data: $form.serialize()
+
+    }).success(
+      validateForm()
+    );
+  })
+  </script>
+
+  <script>
+  function validateForm() {
+   var x = document.forms["myForm"]["phone"].value;
+   if ( x == null || x == "" ) {
+   }
+
+       //alert('Submitted. You\'ll be contacted soon with the payment details and allotted portfolio');
+       window.open("http://www.manipalmun.com/redirectdel.html","_self");
+   }
+</script>
+
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
